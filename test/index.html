@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>zepto.appear</title>
+
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="cleartype" content="on">
+
+        <style>
+          .container {
+            margin: auto;
+            width: 320px;
+          }
+          .content {
+            border: 1px solid black;
+            padding: 150px 10px;
+            margin: 30px 0px;
+            text-align: center;
+          }
+        </style>
+
+    </head>
+
+    <body>
+
+        <!-- Add your site or application content here -->
+
+        <div class="container">
+
+          <div class="content" id="content1">
+            background should be yellow
+          </div>
+
+          <div class="content" id="content2">
+            background should be yellow
+          </div>
+
+          <div class="content" id="content3">
+            background should be yellow
+          </div>
+
+          <div class="content" id="content4">
+            background should be yellow
+          </div>
+
+          <div class="content" id="content5">
+            background should be yellow
+          </div>
+
+        </div>
+
+        <script src="zepto.min.js"></script>
+        <script src="zepto.event.js"></script>
+        <script src="zepto.selector.js"></script>
+        <script src="../zepto.appear.js"></script>
+        <script>
+            Zepto(function($){
+                $('.content').appear(function() {
+                    $(this).css('background-color', '#ff0');
+                });
+            });
+        </script> 
+    </body>
+</html>
+
